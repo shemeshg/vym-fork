@@ -32,7 +32,7 @@ public:
 	ModModeXLink	//!< Create a XLink (XLinkObj) from selected object
 	};
 
-    Main(QWidget* parent=0, Qt::WindowFlags f=0);
+    Main(QWidget* parent=0, Qt::WindowFlags f= Qt::WindowFlags());
     ~Main();
     void loadCmdLine();
 

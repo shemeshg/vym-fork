@@ -47,6 +47,7 @@ protected:
     virtual void positionBBox();
     virtual void calcBBoxSize();
 private:
+    using MapObj::copy;
     ImageObj* icon;
 };
 

@@ -56,6 +56,8 @@ public:
 
 protected:
     AnimPoint anim;
+private:
+    using OrnamentedObj::copy;
 };
 
 

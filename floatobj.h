@@ -25,6 +25,8 @@ public:
     virtual void reposition();
 					    
     virtual QRectF getBBoxSizeWithChildren();	// return size of BBox including children  
+
+    using OrnamentedObj::copy;
 };
 
 #endif

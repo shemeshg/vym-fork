@@ -193,6 +193,8 @@ bool ConfluenceAgent::dataReceived(int exitCode, QProcess::ExitStatus exitStatus
     } else	
 	qWarning() << "ConfluenceAgent: Process finished with exitCode=" << exitCode;
     vymProcess = NULL;
+
+    return succ;
 }
 
 void ConfluenceAgent::timeout()

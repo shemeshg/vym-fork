@@ -16,6 +16,7 @@ public:
     virtual void positionBBox();
 	virtual void calcBBoxSize();
 private:
+    using MapObj::copy;
 //    QGraphicsSimpleTextItem* newLine(QString);		// generate new textline
     QGraphicsTextItem* newLine(QString);		// generate new textline
 public:    

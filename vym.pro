@@ -4,7 +4,7 @@ LANGUAGE    = C++
 
 CONFIG	+= qt warn_on x86_64 
 
-QMAKE_MAC_SDK = macosx10.10
+
 
 QT += network 
 QT += xml 
@@ -37,10 +37,7 @@ win32 {
 
     QT_QPA_PLATFORM_PLUGIN_PATH=%QTDIR%\plugins\platforms\
 }
-macx {
-    QMAK_MAC_SDK = macosx10.10
-    QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.10
-}
+
 
 TRANSLATIONS += lang/vym.de_DE.ts
 TRANSLATIONS += lang/vym.el.ts

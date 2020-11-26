@@ -61,12 +61,15 @@ public:
     virtual QString getSystemFlagName (const QPointF &p);
     virtual QRectF getBBoxFlag (const QString &name);
 
-protected:
+    using LinkableMapObj::copy;
+protected:    
     HeadingObj *heading;	// Heading
     FlagRowObj *systemFlags;	    // System Flags
     FlagRowObj *standardFlags;	    // Standard Flags
     FrameObj *frame;		// frame around object
     QRectF ornamentsBBox;	// bbox of flags and heading
+
+
 };
 
 #endif

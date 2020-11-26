@@ -50,6 +50,8 @@ public:
     LinkableMapObj ();
     LinkableMapObj (QGraphicsItem*, TreeItem *ti=NULL);
     virtual ~LinkableMapObj ();
+
+    using MapObj::copy;
 protected:
     virtual void init ();
     virtual void createBottomLine();

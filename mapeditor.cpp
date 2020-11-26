@@ -259,7 +259,7 @@ void MapEditor::setScrollBarPosTarget (QRectF rect)
     // Prepare scrolling
     qreal width = viewport()->width();
     qreal height = viewport()->height();
-    QRectF viewRect = matrix().mapRect(rect);
+    QRectF viewRect = transform().mapRect(rect);
 
     qreal left = horizontalScrollBar()->value();
     qreal right = left + width;

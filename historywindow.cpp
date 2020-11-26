@@ -118,12 +118,12 @@ void HistoryWindow::update(SimpleSettings &set)
 	if (i!=1)
 	{
 	    item=new QTableWidgetItem("");
-	    item->setBackgroundColor (c);
+        item->setBackground (c);
 	    ui.historyTable->setItem(undosAvail, i, item);
 	}
     }
     item=new QTableWidgetItem(" - " +tr("Current state","Current bar in history hwindow")+ " - ");
-    item->setBackgroundColor (c);
+    item->setBackground (c);
     ui.historyTable->setItem(undosAvail, 1, item);
 
     // Show "now" row

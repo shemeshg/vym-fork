@@ -48,6 +48,8 @@ public:
         int row, int column, const QModelIndex &parent);
 
 private:
+    using QAbstractTableModel::index;
+    using QAbstractTableModel::insertRows;
     QList <Task*> tasks;
     uint showParentsLevel;
  };

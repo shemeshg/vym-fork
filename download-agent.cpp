@@ -104,7 +104,7 @@ void DownloadAgent::doDownload(const QUrl &url)
         QByteArray idCookieValue = settings.value("/downloads/cookies/vymID/value",QByteArray() ).toByteArray();
         //idCookieValue = QVariant("2000000002601").toByteArray(); //TESTING!!!
         //qDebug()<<"idCookie="<<idCookieValue;
-        if (!idCookieValue.size() == 0 )
+        if (! (idCookieValue.size() == 0) )
         {
             QNetworkCookie idCookie;
             idCookie.setPath("/");
@@ -113,7 +113,7 @@ void DownloadAgent::doDownload(const QUrl &url)
             idCookie.setName("vymID");
             idCookie.setValue(idCookieValue);
             //idCookie.setExpirationDate( settings.value("/downloads/cookies/id/expires", QVariant(QDateTime::currentDateTime().addSecs(60) )).toDateTime() ); // testing
-            idCookie.setExpirationDate( QDateTime( QDate(2099,1,1) ) ); 
+            idCookie.setExpirationDate(  QDate(2099,1,1).startOfDay()  );
             agent.cookieJar()->insertCookie(idCookie);
 
             QNetworkCookie platformCookie;
@@ -122,7 +122,7 @@ void DownloadAgent::doDownload(const QUrl &url)
             platformCookie.setDomain("www.insilmaril.de");
             platformCookie.setName("vymPlatform");
             platformCookie.setValue( QVariant(vymPlatform).toByteArray() );
-            platformCookie.setExpirationDate( QDateTime( QDate(2099,1,1) ) ); 
+            platformCookie.setExpirationDate( QDate(2099,1,1).startOfDay()  );
             agent.cookieJar()->insertCookie(platformCookie);
         }
     }
@@ -154,7 +154,7 @@ void DownloadAgent::execute()
     doDownload(url);
 }
 
-void DownloadAgent::sslErrors(const QList<QSslError> &sslErrors)
+void DownloadAgent::sslErrors(const QList<QSslError> &)
 {
 #ifndef QT_NO_OPENSSL
     foreach (const QSslError &error, sslErrors)

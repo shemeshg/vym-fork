@@ -30,6 +30,10 @@ public:
 
 protected:
     ImageObj *icon;
+private:
+    using FloatObj::copy;
+    using FloatObj::setParObj;
+
 };
 
 #endif

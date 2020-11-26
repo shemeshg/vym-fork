@@ -863,7 +863,7 @@ void TextEditor::textExportAsASCII()
         else
             s = filenameHint;
     } else
-        s = QString::null;
+        s = QString();
     QString caption = tr("Export Note to single file (ASCII)");
     fn = QFileDialog::getSaveFileName(this, caption, s, "VYM Note (ASCII) (*.txt);;All files (*)" );
     int ret = -1;
